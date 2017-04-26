@@ -62,6 +62,9 @@ class StreamTransport extends Transport
             $responseContent = stream_get_contents($stream);
             // see http://php.net/manual/en/reserved.variables.httpresponseheader.php
             $responseHeaders = $http_response_header;
+            if(!$responseHeaders) {
+                throw new Exception("request faliure");
+            }
             fclose($stream);
         } catch (\Exception $e) {
             Yii::endProfile($token, __METHOD__);
