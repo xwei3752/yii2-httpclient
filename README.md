@@ -22,7 +22,7 @@ Either run
 ```
 php composer.phar require --prefer-dist yiisoft/yii2-httpclient
 ```
-
+ 
 or add
 
 ```
